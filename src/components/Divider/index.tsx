@@ -15,6 +15,7 @@ export const Divider = ({
 }: DividerProps) => {
   const mergedStyle = useMemo(() => {
     return {
+      color: 'inherit',
       borderStyle: borderStyle,
       borderWidth: borderWidth,
       borderColor: borderColor,

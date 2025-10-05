@@ -1,0 +1,10 @@
+###################################
+##           FRONT PAGE          ##
+###################################
+
+[ ] Vanity section
+[ ] Current employer
+[ ] Education
+[ ] Fake advertisement
+[ ] Blogs
+[ ] Projects with links

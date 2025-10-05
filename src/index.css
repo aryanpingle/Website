@@ -2,6 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Metamorphous&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
+*::selection {
+  background-color: hsl(34, 57%, 50%);
+}
+
 :root {
   font-family: "Roboto Slab", serif;
   font-weight: 400;
@@ -35,9 +39,10 @@ body {
   background-image: url(assets/paper-texture.jpg);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+@media (min-width: 720px) {
+  body {
+    padding: 2rem;
+  }
 }
 
 button {
@@ -77,4 +82,16 @@ h6 {
 
 p {
   margin: 0.5rem 0;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.1;
+  margin: 2rem 0;
+}
+
+@media (min-width: 720px) {
+  h1 {
+    font-size: 3.2rem;
+  }
 }

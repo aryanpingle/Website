@@ -1,0 +1,15 @@
+.masthead-title-container {
+  font-family: "Old London", serif;
+  font-size: 10rem;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.masthead-title-text {
+  width: max-content;
+  white-space: nowrap;
+}

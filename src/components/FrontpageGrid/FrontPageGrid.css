@@ -1,28 +1,12 @@
-.frontpage-grid {
-  margin-top: 0.5rem;
-  overflow: hidden;
-  display: grid;
-  gap: 0.5rem;
-  grid-auto-flow: row dense;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.frontpage-grid > * {
-  border: 0.15rem dotted currentColor;
+.frontpage-article {
   padding: 0.5rem;
-
   display: flex;
   flex-direction: column;
 }
 
-@media (max-width: 1024px) {
-  .frontpage-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 720px) {
-  .frontpage-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
+.frontpage-article p::first-letter {
+  font-size: 2rem;
+  line-height: 1rem;
+  margin-right: 0.05rem;
+  font-weight: bold;
 }
