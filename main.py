@@ -22,3 +22,9 @@ process_image(
     "mask.png",
     "src/assets/processed/hero-1.png",
 )
+
+process_image(
+    "src/assets/originals/Outer Wilds.jpg",
+    "mask.png",
+    "src/assets/processed/Outer Wilds.png",
+)
