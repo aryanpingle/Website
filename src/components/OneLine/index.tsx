@@ -9,7 +9,12 @@ export interface OneLineProps {
   fontSize?: string;
 }
 
-export function OneLine({ text, textAlign, fontFamily, fontSize }: OneLineProps) {
+export function OneLine({
+  text,
+  textAlign,
+  fontFamily,
+  fontSize,
+}: OneLineProps) {
   const containerStyles = useMemo<React.HTMLAttributes<object>["style"]>(
     () => ({
       fontFamily,
@@ -20,7 +25,7 @@ export function OneLine({ text, textAlign, fontFamily, fontSize }: OneLineProps)
       alignItems: "center",
       overflow: "hidden",
     }),
-    [fontFamily, fontSize, textAlign]
+    [fontFamily, fontSize, textAlign],
   );
 
   const textStyles = useMemo<React.HTMLAttributes<object>["style"]>(
@@ -28,7 +33,7 @@ export function OneLine({ text, textAlign, fontFamily, fontSize }: OneLineProps)
       width: "max-content",
       whiteSpace: "nowrap",
     }),
-    []
+    [],
   );
 
   return (

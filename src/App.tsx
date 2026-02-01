@@ -3,6 +3,7 @@ import { Masthead } from "./components/Masthead";
 import { FrontPageGrid } from "./components/FrontpageGrid";
 import { adjustOnelineComponents } from "./components/OneLine/utils";
 import throttle from "throttleit";
+import { Divider } from "./components/Divider";
 
 window.addEventListener("load", adjustOnelineComponents);
 window.addEventListener("resize", throttle(adjustOnelineComponents, 100));
@@ -12,6 +13,14 @@ function App() {
     <>
       <Masthead />
       <FrontPageGrid />
+      <Divider
+        style={{
+          margin: "0.2rem 0",
+          borderWidth: "0.075rem",
+          borderStyle: "dashed",
+        }}
+      />
+      <Divider style={{ margin: "0.2rem 0", borderWidth: "0.075rem" }} />
     </>
   );
 }

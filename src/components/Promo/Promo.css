@@ -1,0 +1,19 @@
+.frontpage-promo {
+  margin: 0.2rem 0;
+  position: relative;
+}
+
+.frontpage_promo-text {
+}
+
+.frontpage_promo-image {
+  padding: 0.25rem;
+}
+
+.promo_svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
