@@ -86,15 +86,17 @@ export const Article = memo(
                 style={{
                   pointerEvents: "none",
                   userSelect: "none",
-                  opacity: 0.8,
                 }}
               >
+                {/* Outline */}
                 <path
                   d={`${outerSvgPathD} ${innerSvgPathD}`}
                   fill="black"
                   fillRule="evenodd"
+                  opacity={0.65}
                 />
-                <path d={innerSvgPathD} fill="currentColor" opacity={0.4} />
+                {/* Background */}
+                <path d={innerSvgPathD} fill="currentColor" opacity={0.25} />
               </svg>
               {linkText}
             </a>
