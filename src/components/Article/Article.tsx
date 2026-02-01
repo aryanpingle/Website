@@ -94,7 +94,7 @@ export const Article = memo(
                   fill="black"
                   fillRule="evenodd"
                 />
-                <path d={innerSvgPathD} fill="currentColor" opacity={0.5} />
+                <path d={innerSvgPathD} fill="currentColor" opacity={0.4} />
               </svg>
               {linkText}
             </a>
