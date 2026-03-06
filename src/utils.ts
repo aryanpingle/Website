@@ -125,14 +125,21 @@ export function getSaloonOutlinePath(
   ]);
 }
 
-export function getSaloonOutlinePath2(
-  width: number,
-  height: number,
-  radiusX: number,
-  radiusY: number,
-  paddingX: number = 0,
-  paddingY: number = 0,
-) {
+export function getSaloonOutlinePath2({
+  width,
+  height,
+  radiusX,
+  radiusY,
+  paddingX = 0,
+  paddingY = 0,
+}: {
+  width: number;
+  height: number;
+  radiusX: number;
+  radiusY: number;
+  paddingX?: number;
+  paddingY?: number;
+}) {
   return encodeSVGPath([
     {
       type: SVGPathData.MOVE_TO,

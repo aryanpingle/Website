@@ -1,10 +1,8 @@
 ###################################
-##           FRONT PAGE          ##
+##            WEBSITE            ##
 ###################################
 
-[ ] Vanity section
-[ ] Current employer
-[ ] Education
-[ ] Fake advertisement
-[ ] Blogs
-[ ] Projects with links
+[ ] Frontpage
+[ ] Blog routing
+[ ] Blog parsing + page
+[ ] Personal articles

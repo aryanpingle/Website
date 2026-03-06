@@ -1,5 +1,5 @@
 import { Masonry } from "@mui/lab";
-import { BEER_IMAGE, HERO_IMAGE, TUNIC_IMAGE } from "@/images";
+import { BEER_IMAGE, HERO_IMAGE, CHARACTERS_IMAGE } from "@/images";
 import { Article } from "../Article/Article";
 import { Promo } from "../Promo/Promo";
 
@@ -19,7 +19,8 @@ export const FrontPageGrid = () => {
       spacing={0}
       sx={{ marginTop: "1rem" }}
     >
-      <Promo imageSrc={TUNIC_IMAGE} />
+      <Article title="Greatest Drinker Ever?" imageSrc={BEER_IMAGE} />
+      {/* <Promo imageSrc={TUNIC_IMAGE} /> */}
       <Article
         title="Inside the mind of a genius"
         imageSrc={HERO_IMAGE}
@@ -32,7 +33,7 @@ export const FrontPageGrid = () => {
         linkText={"Read More"}
         link={"https://example.com"}
       />
-      <Article title="Greatest Drinker Ever?" imageSrc={BEER_IMAGE} />
+      <Article title="" imageSrc={CHARACTERS_IMAGE} />
     </Masonry>
   );
 };

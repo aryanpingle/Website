@@ -28,20 +28,20 @@ export const Article = memo(
     const RY = 20;
     const PY = 10;
     const ASPECT_RATIO = 5;
-    const outerSvgPathD = getSaloonOutlinePath2(
-      100,
-      100,
-      RY / ASPECT_RATIO,
-      RY,
-    );
-    const innerSvgPathD = getSaloonOutlinePath2(
-      100,
-      100,
-      RY / ASPECT_RATIO,
-      RY,
-      PY / ASPECT_RATIO,
-      PY,
-    );
+    const outerSvgPathD = getSaloonOutlinePath2({
+      width: 100,
+      height: 100,
+      radiusX: RY / ASPECT_RATIO,
+      radiusY: RY,
+    });
+    const innerSvgPathD = getSaloonOutlinePath2({
+      width: 100,
+      height: 100,
+      radiusX: RY / ASPECT_RATIO,
+      radiusY: RY,
+      paddingX: PY / ASPECT_RATIO,
+      paddingY: PY,
+    });
 
     console.log("outer", outerSvgPathD);
     console.log("inner", innerSvgPathD);
