@@ -1,8 +1,0 @@
-###################################
-##            WEBSITE            ##
-###################################
-
-[ ] Frontpage
-[ ] Blog routing
-[ ] Blog parsing + page
-[ ] Personal articles
