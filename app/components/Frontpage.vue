@@ -1,34 +1,64 @@
-<script setup>
-import BEER_IMAGE from "~/assets/beer.png";
-import HERO_IMAGE from "~/assets/hero.png";
+<script setup lang="ts">
+import throttle from "throttleit";
+import ArticleRenderer from "./ArticleRenderer.vue";
 
-const HERO_TEXT = `
-In all of jujutsu sorcerer history, there's never been anyone who has managed to subjugate this one. In this exclusive issue, with this sacred treasure, we summon 24 year old, Divergent Sila Divine General, Aryan Pingle.
+const SM = 720;
+const MD = 1200;
 
-While others coward behind platitudes of fake humility, he boldly proclaims himself to be a 'Web Developer Extraordinaire'. But don't be fooled by the sheer magnificence of his aptitude in Front-End Web Development, for his peers deem him a master of adaptability; he can make container management scripts as skillfully as he can prototype in Figma. This charismatic prodigy is the single greatest asset to the fields of Compiler Construction, Meta-programming, and Engineering in general (with the sole exception of Terry Davis, of course).`;
+const columnwiseData = ref<ColumnwiseArticles>({});
 
-const ETERNAL_TEXT = `
-Analysts are in shambles — in a statistically improbable stroke of good fortune, Eternal recently managed to acquire one of the top 5 frontend developers in India. Sources close to the situation confirm that "Nugget" was the entity that added Aryan Pingle to its arsenal, but Eternal has refused to comment — possibly to avoid setting unrealistic expectations for other teams.
-`;
+const recalculate = () => {
+  if (window.innerWidth <= SM) columnwiseData.value = ARTICLES["sm"];
+  else if (window.innerWidth <= MD) columnwiseData.value = ARTICLES["md"];
+  else columnwiseData.value = ARTICLES["lg"];
+};
+
+const throttledRecalculate = throttle(recalculate, 100);
+
+// Recalculate columns once + every time window is resized
+onMounted(() => {
+  recalculate();
+  window.addEventListener("resize", throttledRecalculate);
+});
+// Remove event listeners
+onUnmounted(() => {
+  window.removeEventListener("resize", throttledRecalculate);
+});
 </script>
 
 <template>
-  <div style="display: flex; flex-direction: column">
-    <Article title="Greatest Drinker Ever?" :image-src="BEER_IMAGE"></Article>
-    <Article
-      title="Inside the mind of a genius"
-      :imageSrc="HERO_IMAGE"
-      :text="HERO_TEXT"
-    ></Article>
-    <Article
-      title="Eternal Wins The Lottery"
-      date="Gurgaon, January 26, 2026"
-      :text="ETERNAL_TEXT"
-      linkText="Read more"
-      link="https://example.com"
-    ></Article>
-    <Article title="" imageSrc="{CHARACTERS_IMAGE}" />
+  <div style="display: flex">
+    <div
+      v-if="columnwiseData['1']?.length"
+      class="frontpage_column"
+      style="flex: 1; display: flex; flex-direction: column"
+    >
+      <ArticleRenderer
+        v-for="value in columnwiseData['1']"
+        :article-id="value"
+      />
+    </div>
+
+    <div v-if="columnwiseData['2']?.length" class="frontpage_column">
+      <ArticleRenderer
+        v-for="value in columnwiseData['2']"
+        :article-id="value"
+      />
+    </div>
+
+    <div v-if="columnwiseData['3']?.length" class="frontpage_column">
+      <ArticleRenderer
+        v-for="value in columnwiseData['3']"
+        :article-id="value"
+      />
+    </div>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.frontpage_column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+</style>
