@@ -9,7 +9,7 @@ const { link, text } = defineProps({
   },
   imageSrc: { type: String },
   text: { type: String },
-  date: { type: String },
+  byline: { type: String },
   link: { type: String },
   linkText: { type: String },
 });
@@ -49,10 +49,10 @@ const imgStyle = reactive<CSSProperties>({
     <div class="frontpage-article">
       <h1 v-if="$props.title" style="text-align: center">{{ $props.title }}</h1>
       <div
-        v-if="$props.date"
+        v-if="$props.byline"
         style="text-align: center; font-style: italic; margin-bottom: 1rem"
       >
-        Senku Ishigami — {{ $props.date }}
+        {{ $props.byline }}
       </div>
       <img :src="$props.imageSrc" :style="imgStyle" alt="" />
 

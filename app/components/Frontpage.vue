@@ -5,7 +5,7 @@ import ArticleRenderer from "./ArticleRenderer.vue";
 const SM = 720;
 const MD = 1200;
 
-const columnwiseData = ref<ColumnwiseArticles>({});
+const columnwiseData = ref<ColumnwiseArticles>(ARTICLES["sm"]);
 
 const recalculate = () => {
   if (window.innerWidth <= SM) columnwiseData.value = ARTICLES["sm"];
