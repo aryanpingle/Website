@@ -1,75 +1,15 @@
-# Nuxt Minimal Starter
+# The best website on the planet
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Uses Vue + Vite for reactivity. Nuxt for the website scaffolding + routing.
+
+But tbh I should go straight for vanilla. Let's see.
 
 ## Setup
 
-Make sure to install dependencies:
+- Install dependencies: `pnpm install`.
+- Development server: `pnpm dev` (at <http://localhost:3000>)
+- Build for production: `pnpm build`
 
-```bash
-# npm
-npm install
+## References
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- [Fleurons](https://www.streamlinehq.com/elements/ornaments-side?icon=ico_04amYvcqC2F7huCJ)
