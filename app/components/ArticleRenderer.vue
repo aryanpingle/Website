@@ -25,6 +25,12 @@ But what is art, if not an expression to comfort the disturbed and disturb the c
 We here at _The Daily Pingle_... we're bringing sexy back.
 `;
 
+const BLOG_TEXT = `
+That one scene from _The Social Network_ where Mark is downing a beer and writing a blog with _In Motion_ playing in the background — it has left a strong impression on neurodivergent young adults who fancy themselves the next Zuckerberg. But not the lame, real-life billionaire; just the cool in-movie counterpart.
+
+If you were to replace the beer with Soju, you'd find an accurate depiction of how it felt to write these blogs.
+`;
+
 defineProps<{ articleId: ArticleId }>();
 </script>
 
@@ -64,9 +70,17 @@ defineProps<{ articleId: ArticleId }>();
 
   <Article
     v-if="$props.articleId === 'website'"
-    title="&quot;Websites aren't sexy anymore&quot;"
+    title='"Websites aren&apos;t sexy anymore"'
     byline="Jogoat / Shibuya / March 14, 2026"
     :text="WEBSITE_TEXT"
+  ></Article>
+
+  <Article
+    v-if="$props.articleId === 'blogs'"
+    title="From The Editor's Desk"
+    :text="BLOG_TEXT"
+    link="/blogs"
+    link-text="View Blogs"
   ></Article>
 </template>
 
