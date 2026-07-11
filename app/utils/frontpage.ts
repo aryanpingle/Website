@@ -36,13 +36,13 @@ export const ARTICLES: Breakpoints = {
   },
   // Tablet
   md: {
-    "1": ["island", "contact", "drinker", "blogs", "xkcd"],
+    "1": ["island", "blogs", "drinker", "contact", "xkcd"],
     "2": ["hero", "eternal", "website"],
   },
   // Desktop
   lg: {
-    "1": ["island", "drinker", "blogs"],
+    "1": ["island", "drinker", "contact"],
     "2": ["hero", "website"],
-    "3": ["contact", "eternal", "xkcd"],
+    "3": ["blogs", "eternal", "xkcd"],
   },
 };
