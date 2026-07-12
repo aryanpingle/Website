@@ -10,7 +10,11 @@ Gongs of the _Gion Shoja_ bells echo the impermanence of all things. The color o
 While others coward behind platitudes of fake humility, he boldly proclaims himself to be a 'Web Developer Extraordinaire'. But don't be fooled by the sheer magnificence of his aptitude in making stunning websites, for his peers deem him a master of adaptability; he makes container management scripts as skillfully as he prototypes in Figma. A "Jack of all trades" in the truest sense. This charismatic prodigy is the single greatest asset to the fields of Compiler Construction, Meta-programming, and Engineering in general. With the sole exception of Terry Davis, of course.`;
 
 const ZOMATO_TEXT = `
-After a legendary 1 year run at _Zomato_, senior executives at _Eternal_ have decided to leverage Pingle's talents to the fullest at _Temple_ — a health-oriented smart-wearable company. During his tenure at Zomato, he made a name for himself as a full-stack developer, contributing to the user interface as well as to the overall code infrastructure. It's no surprise that these qualities are sought after by an early stage startup infamous for an extremely rapid pace. Sources close to him claim, "If he was content with all we could offer him, then he would have ceased to be my best friend" and "Maybe the real engineering was the friends we made along the way".
+It truly seems like there's nothing this man can't do. In one year, Aryan Pingle transformed Zomato's latest venture, [Nugget](https://nugget.com), into a technological marvel. He has made a name for himself as a full-stack developer, transforming their user interface as well as their overall software infrastructure.
+
+And then he did it again. Sources say senior executives brought him aboard Deepinder Goyal's latest venture (this time, in the art world) to leverage his enormous talent. Despite unconfirmed reports of questionable leadership at [Quiet Art Movement](https://quietart.com), he built up their tech infrastructure to generate several lakhs, starting from nothing.
+
+AND HE GOES FOR A THREEPEAT — Pingle is now back at Zomato, this time in the legendary Web Platform team, being a "cross-functional innovator" in AI-enhanced products. Sources close to him claim, "If he was content with all we could offer him, then he would have ceased to be my best friend" and "Maybe the real engineering was the friends we made along the way".
 `;
 
 const CONTACT_TEXT = `
@@ -50,8 +54,8 @@ defineProps<{ articleId: ArticleId }>();
 
   <Article
     v-if="$props.articleId === 'eternal'"
-    title="Zomato ordered to donate to Temple"
-    byline="Aoi Todo / Gurgaon / March 1, 2026"
+    title="Zomato Boy Delivers"
+    byline="Aoi Todo / Gurgaon / May 24, 2026"
     :text="ZOMATO_TEXT"
   ></Article>
 

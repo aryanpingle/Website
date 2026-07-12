@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { getSaloonOutlinePath } from "@/utils";
-import type { CSSProperties, Fragment } from "vue";
-import MASK_IMAGE from "~/assets/mask.webp";
 import { parse } from "marked";
 
 const { link, text } = defineProps({
@@ -9,6 +7,7 @@ const { link, text } = defineProps({
     type: String,
   },
   imageSrc: { type: String },
+  imageCaption: { type: String },
   text: { type: String },
   byline: { type: String },
   link: { type: String },
@@ -32,15 +31,6 @@ const innerSvgPathD = getSaloonOutlinePath({
   paddingX: PY / ASPECT_RATIO,
   paddingY: PY,
 });
-
-const imgStyle = reactive<CSSProperties>({
-  maxWidth: "100%",
-  maskImage: `url(${MASK_IMAGE})`,
-  maskMode: "luminance",
-  maskSize: "100% 100%",
-  maskRepeat: "no-repeat",
-  filter: "sepia(1)",
-});
 </script>
 
 <template>
@@ -52,7 +42,7 @@ const imgStyle = reactive<CSSProperties>({
     >
       {{ $props.byline }}
     </div>
-    <img :src="$props.imageSrc" :style="imgStyle" loading="lazy" />
+    <Image v-if="$props.imageSrc" :src="$props.imageSrc" :caption="$props.imageCaption" />
 
     <template v-if="text">
       <div class="article_body" v-html="parse(text)"></div>
