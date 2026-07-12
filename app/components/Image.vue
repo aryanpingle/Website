@@ -33,3 +33,9 @@ const imgStyle = reactive<CSSProperties>({
     </figcaption>
   </figure>
 </template>
+
+<style scoped>
+figure {
+  margin: 0;
+}
+</style>
