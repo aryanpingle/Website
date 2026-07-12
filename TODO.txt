@@ -1,17 +1,23 @@
 ###################################
-##         FIRST RELEASE         ##
+##           Release 1           ##
 ###################################
 
-[ ] SEO
-[ ] Finish up homepage articles
-[X] Contact byline / article
-[X] Create grid for desktop & mobile
-[X] Setup deployment pipeline
-[X] Oneline text recalculation on page load
+[ ] Projects article
+
+[ ] Projects page
+[ ] (Project) Apollo Archive
+[ ] (Project) Runic
+[ ] (Project) Traveler's Encore
+[ ] (Project) Mess Menu
+
+[ ] Blogs page
+[ ] (Blog) One Minute
+
+[ ] SEO on frontpage
+[ ] Banner image
 
 ###################################
-##         SECOND RELEASE        ##
+##              Tech             ##
 ###################################
 
-[ ] Add blog pages
-[ ] Polish grid for desktop / tablet / mobile
+[ ] Fuck @nuxt/content, use marked or some shit
