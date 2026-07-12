@@ -32,6 +32,10 @@ onUnmounted(() => {
 <template>
   <Masthead />
   <NuxtPage />
+  <Divider
+    style="margin: 0.2rem 0; margin-top: 0; border-width: 0.075rem"
+    border-style="dashed"
+  />
   <Divider style="margin: 0.2rem 0; margin-top: 0; border-width: 0.075rem" />
 </template>
 
